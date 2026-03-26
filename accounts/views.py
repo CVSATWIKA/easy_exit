@@ -20,7 +20,8 @@ def login_view(request):
         return JsonResponse({"error": "Invalid credentials"}, status=401)
 
     login(request, user)
-    return JsonResponse({"message": "Login successful", "role": user.role})
+    request.session.save()
+    return JsonResponse({"message": "Login successful", "role": user.role, "sessionid": request.session.session_key,})
 
 
 @csrf_exempt
