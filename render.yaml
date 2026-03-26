@@ -2,7 +2,7 @@ services:
   - type: web
     name: easy-exit-backend
     env: python
-    buildCommand: "pip install -r requirements.txt && python manage.py collectstatic --noinput && python manage.py migrate"
+    buildCommand: "pip install -r requirements.txt && python manage.py collectstatic --noinput && python manage.py migrate && python manage.py loadproductiondata"
     startCommand: "gunicorn easy_exit_backend.wsgi:application"
     envVars:
       - key: SECRET_KEY
