@@ -22,7 +22,7 @@ def login_view(request):
     return JsonResponse({"message": "Login successful", "role": user.role})
 
 
-
+@csrf_exempt
 def profile_view(request):
     if not request.user.is_authenticated:
         return JsonResponse({"error": "Not authenticated"}, status=401)
