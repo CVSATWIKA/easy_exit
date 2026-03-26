@@ -153,8 +153,8 @@ CSRF_COOKIE_SECURE      = True
 
 
 SESSION_COOKIE_HTTPONLY = False
-SESSION_COOKIE_DOMAIN   = None
-CSRF_COOKIE_DOMAIN      = None
+SESSION_COOKIE_DOMAIN   = ".onrender.com"
+CSRF_COOKIE_DOMAIN      = ".onrender.com"
 
 # ── Misc ──────────────────────────────────────────────────────
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
