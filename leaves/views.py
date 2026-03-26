@@ -398,3 +398,4 @@ def warden_action(request, leave_id):
         return JsonResponse({"message": "Approved", "token": str(qr.token)})
 
     return JsonResponse({"error": "Invalid action"}, status=400)
+
