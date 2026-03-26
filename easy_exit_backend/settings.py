@@ -8,7 +8,6 @@ import dj_database_url
 print("EASY EXIT BACKEND SETTINGS LOADED")
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-FIXTURE_DIRS = [BASE_DIR / 'accounts' / 'fixtures']
 # ── Security ────────────────────────────────────────────────
 SECRET_KEY = os.environ.get(
     'SECRET_KEY',
