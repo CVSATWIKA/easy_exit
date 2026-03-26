@@ -36,10 +36,10 @@ def scan_qr(request, token):
                 "name":     student.user.get_full_name() or student.user.username,
                 "hostel_no": student.hostel_no,
                 "room_no":  student.room_no,
-                "photo":    request.build_absolute_uri(student.photo.url),
+                "photo":    student.photo.url if student.photo else "",
             }
         })
-
+    
     # ── SECOND SCAN → student coming IN ────────────────────────
     if qr.is_out_scanned and not qr.is_in_scanned:
         qr.is_in_scanned  = True
@@ -62,7 +62,7 @@ def scan_qr(request, token):
                 "name":     student.user.get_full_name() or student.user.username,
                 "hostel_no": student.hostel_no,
                 "room_no":  student.room_no,
-                "photo":    request.build_absolute_uri(student.photo.url),
+                "photo":    student.photo.url if student.photo else "",
             }
         })
 

@@ -242,8 +242,9 @@ def hod_requests(request):
 
 
 @csrf_exempt
-@require_http_methods(["POST"])
 @role_required(["hod"])
+@require_http_methods(["POST"])
+
 def hod_action(request, leave_id):
     leave = LeaveRequest.objects.get(id=leave_id)
     action = request.POST.get("action")
@@ -289,8 +290,9 @@ def manager_requests(request):
 
 
 @csrf_exempt
-@require_http_methods(["POST"])
 @role_required(["manager"])
+@require_http_methods(["POST"])
+
 def manager_action(request, leave_id):
     leave = LeaveRequest.objects.get(id=leave_id)
     action = request.POST.get("action")
@@ -307,22 +309,8 @@ def manager_action(request, leave_id):
 
 
 
-from accounts.models import User
+@role_required(["warden"])
 def warden_requests(request):
-    user_id = request.headers.get("X-USER-ID")
-
-    if not user_id:
-        return JsonResponse({"error": "Authentication required"}, status=401)
-
-    try:
-        user = User.objects.get(id=user_id)
-    except User.DoesNotExist:
-        return JsonResponse({"error": "Invalid user"}, status=401)
-
-    if user.role != "warden":
-        return JsonResponse({"error": "Permission denied"}, status=403)
-
-
 
     status = request.GET.get("status", "pending")
     leaves = LeaveRequest.objects.all()
@@ -369,8 +357,9 @@ def warden_requests(request):
 
 
 @csrf_exempt
-@require_http_methods(["POST"])
 @role_required(["warden"])
+@require_http_methods(["POST"])
+
 def warden_action(request, leave_id):
     if request.method != "POST":
         return JsonResponse({"error": "POST required"}, status=400)
