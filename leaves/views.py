@@ -1,5 +1,4 @@
 from django.http import JsonResponse
-from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_http_methods
 from django.views.decorators.csrf import csrf_exempt
 import json
@@ -42,7 +41,6 @@ def get_monthly_usage(student_profile, year, month):
     return {"gate": gate_used, "home": home_used}
 
 
-@login_required
 @role_required(["student"])
 def my_leaves(request):
 
@@ -114,7 +112,6 @@ def my_leaves(request):
 
 
 @csrf_exempt
-@login_required
 @role_required(["student"])
 def create_leave(request):
 
@@ -215,7 +212,7 @@ def create_leave(request):
         return JsonResponse({"error": str(e)}, status=400)
 
 
-@login_required
+
 @role_required(["hod"])
 def hod_requests(request):
 
@@ -246,7 +243,6 @@ def hod_requests(request):
 
 @csrf_exempt
 @require_http_methods(["POST"])
-@login_required
 @role_required(["hod"])
 def hod_action(request, leave_id):
     leave = LeaveRequest.objects.get(id=leave_id)
@@ -264,7 +260,7 @@ def hod_action(request, leave_id):
     return JsonResponse({"message": "Action recorded"})
 
 
-@login_required
+
 @role_required(["manager"])
 def manager_requests(request):
     status = request.GET.get("status", "pending")
@@ -294,7 +290,6 @@ def manager_requests(request):
 
 @csrf_exempt
 @require_http_methods(["POST"])
-@login_required
 @role_required(["manager"])
 def manager_action(request, leave_id):
     leave = LeaveRequest.objects.get(id=leave_id)
@@ -311,7 +306,7 @@ def manager_action(request, leave_id):
     return JsonResponse({"message": "Manager action recorded"})
 
 
-@login_required
+
 @role_required(["warden"])
 def warden_requests(request):
     status = request.GET.get("status", "pending")
@@ -360,7 +355,6 @@ def warden_requests(request):
 
 @csrf_exempt
 @require_http_methods(["POST"])
-@login_required
 @role_required(["warden"])
 def warden_action(request, leave_id):
     if request.method != "POST":
