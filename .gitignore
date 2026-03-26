@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+venv/
+env/
+
+# Django
+db.sqlite3
+media/
+staticfiles/
+
+node_modules/
+package.json
+package-lock.json
+# OS
+.DS_Store
+Thumbs.dbeasy-exit-frontend/
+
+easy-exit-frontend/
