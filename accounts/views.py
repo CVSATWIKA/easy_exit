@@ -23,10 +23,8 @@ def login_view(request):
 
 
 @csrf_exempt
+@login_required
 def profile_view(request):
-    if not request.user.is_authenticated:
-        return JsonResponse({"error": "Not authenticated"}, status=401)
-
     user = request.user
 
     profile_data = {
