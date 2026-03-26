@@ -129,6 +129,8 @@ CORS_ALLOWED_ORIGINS = [
     'http://127.0.0.1:3000',
     # ← Add your Netlify URL here after deploying frontend
     'https://easyexit.netlify.app',
+    "https://69c57e55a063c60008431ee2--easyexit.netlify.app",
+    "https://69c579354fb3cd0008717880--easyexit.netlify.app",
 ]
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_HEADERS = [
@@ -148,6 +150,7 @@ CSRF_TRUSTED_ORIGINS = [
     # ← Add your Render + Netlify URLs after deploying
     'https://easy-exit-backend-1.onrender.com',
     'https://easyexit.netlify.app',
+    "https://*.netlify.app",
 ]
 
 REST_FRAMEWORK = {
