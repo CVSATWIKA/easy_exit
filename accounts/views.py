@@ -95,12 +95,13 @@ def change_password_view(request):
 
     except Exception as e:
         return JsonResponse({"error": str(e)}, status=400)
-    
-    
+
+@csrf_exempt  # ✅ add this
 def logout_view(request):
+    if request.method != "POST":  # ✅ enforce POST
+        return JsonResponse({"error": "POST required"}, status=400)
     logout(request)
     return JsonResponse({"message": "Logged out"})
-
 
 
 from django.core.management import call_command

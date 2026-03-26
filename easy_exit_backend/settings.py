@@ -113,7 +113,7 @@ if os.environ.get('CLOUDINARY_CLOUD_NAME'):
 else:
     # Local development — serve from /media/
     MEDIA_URL  = '/media/'
-    MEDIA_ROOT = BASE_DIR / 'media'
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # ── Auth ──────────────────────────────────────────────────────
 AUTH_USER_MODEL = 'accounts.User'
@@ -131,6 +131,14 @@ CORS_ALLOWED_ORIGINS = [
     'https://easyexit.netlify.app',
 ]
 CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'authorization',
+    'content-type',
+    'x-csrftoken',
+    'x-requested-with',
+]
+
 # ── CSRF ──────────────────────────────────────────────────────
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost:3000',
@@ -142,19 +150,29 @@ CSRF_TRUSTED_ORIGINS = [
     'https://easyexit.netlify.app',
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.SessionAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+}
+
+
 # ── Session & Cookie Settings ─────────────────────────────────
 # Production: cross-site cookies needed (Netlify ↔ Render)
 SESSION_COOKIE_SAMESITE = 'None'
-CSRF_COOKIE_SAMESITE    = 'None'
 SESSION_COOKIE_SECURE   = True
+CSRF_COOKIE_SAMESITE    = 'None'
+
 CSRF_COOKIE_SECURE      = True
 
 
 
 
-SESSION_COOKIE_HTTPONLY = False
-SESSION_COOKIE_DOMAIN   = ".onrender.com"
-CSRF_COOKIE_DOMAIN      = ".onrender.com"
+SESSION_COOKIE_HTTPONLY = True
+
 
 # ── Misc ──────────────────────────────────────────────────────
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
