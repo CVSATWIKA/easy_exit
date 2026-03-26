@@ -307,8 +307,23 @@ def manager_action(request, leave_id):
 
 
 
-@role_required(["warden"])
+from accounts.models import User
 def warden_requests(request):
+    user_id = request.headers.get("X-USER-ID")
+
+    if not user_id:
+        return JsonResponse({"error": "Authentication required"}, status=401)
+
+    try:
+        user = User.objects.get(id=user_id)
+    except User.DoesNotExist:
+        return JsonResponse({"error": "Invalid user"}, status=401)
+
+    if user.role != "warden":
+        return JsonResponse({"error": "Permission denied"}, status=403)
+
+
+
     status = request.GET.get("status", "pending")
     leaves = LeaveRequest.objects.all()
     if status == "pending":

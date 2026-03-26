@@ -36,7 +36,7 @@ def scan_qr(request, token):
                 "name":     student.user.get_full_name() or student.user.username,
                 "hostel_no": student.hostel_no,
                 "room_no":  student.room_no,
-                "photo":    student.photo.url if student.photo else None,
+                "photo":    request.build_absolute_uri(student.photo.url),
             }
         })
 
@@ -62,7 +62,7 @@ def scan_qr(request, token):
                 "name":     student.user.get_full_name() or student.user.username,
                 "hostel_no": student.hostel_no,
                 "room_no":  student.room_no,
-                "photo":    student.photo.url if student.photo else None,
+                "photo":    request.build_absolute_uri(student.photo.url),
             }
         })
 
