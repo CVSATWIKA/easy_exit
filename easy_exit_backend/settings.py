@@ -138,7 +138,7 @@ CSRF_TRUSTED_ORIGINS = [
     'http://localhost:8000',
     'http://127.0.0.1:8000',
     # ← Add your Render + Netlify URLs after deploying
-    'https://easy-exit-backend.onrender.com/',
+    'https://easy-exit-backend-1.onrender.com/',
     'https://easyexit.netlify.app/',
 ]
 
