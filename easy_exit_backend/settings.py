@@ -43,9 +43,9 @@ INSTALLED_APPS = [
 # ── Middleware ───────────────────────────────────────────────
 MIDDLEWARE = [
     
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware', 
-    'corsheaders.middleware.CorsMiddleware',       # ← added
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -144,17 +144,10 @@ CSRF_TRUSTED_ORIGINS = [
 
 # ── Session & Cookie Settings ─────────────────────────────────
 # Production: cross-site cookies needed (Netlify ↔ Render)
-if os.environ.get('SECRET_KEY'):
-    SESSION_COOKIE_SAMESITE = 'None'
-    CSRF_COOKIE_SAMESITE    = 'None'
-    SESSION_COOKIE_SECURE   = True
-    CSRF_COOKIE_SECURE      = True
-else:
-    # Local development
-    SESSION_COOKIE_SAMESITE = 'Lax'
-    CSRF_COOKIE_SAMESITE    = 'Lax'
-    SESSION_COOKIE_SECURE   = False
-    CSRF_COOKIE_SECURE      = False
+SESSION_COOKIE_SAMESITE = 'None'
+CSRF_COOKIE_SAMESITE    = 'None'
+SESSION_COOKIE_SECURE   = True
+CSRF_COOKIE_SECURE      = True
 
 SESSION_COOKIE_HTTPONLY = True
 SESSION_COOKIE_DOMAIN   = None
