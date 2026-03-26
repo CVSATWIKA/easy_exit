@@ -1,5 +1,6 @@
 from django.contrib.auth import authenticate, login, update_session_auth_hash
 from django.http import JsonResponse
+from django.contrib.auth import logout
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.decorators import login_required
 import json
@@ -96,7 +97,12 @@ def change_password_view(request):
         return JsonResponse({"error": str(e)}, status=400)
     
     
-    
+def logout_view(request):
+    logout(request)
+    return JsonResponse({"message": "Logged out"})
+
+
+
 from django.core.management import call_command
 import os
 

@@ -1,10 +1,12 @@
 from django.http import JsonResponse
 from django.utils import timezone
 from .models import QRSession
+from django.views.decorators.csrf import csrf_exempt
 from accounts.decorators import role_required
 
 
-@role_required(["security"])
+
+@csrf_exempt
 def scan_qr(request, token):
     try:
         qr = QRSession.objects.get(token=token)
@@ -67,17 +69,3 @@ def scan_qr(request, token):
     # ── ALREADY USED ────────────────────────────────────────────
     return JsonResponse({"error": "QR already used — student has returned."}, status=400)
 
-from django.core.management import call_command
-import os
-
-def load_data(request):
-    # Simple secret key check so random people can't trigger it
-    secret = request.GET.get('secret')
-    if secret != 'mysecretkey123':
-        return JsonResponse({'error': 'Unauthorized'}, status=401)
-    
-    try:
-        call_command('loaddata', 'datadump.json')
-        return JsonResponse({'status': 'Data loaded successfully!'})
-    except Exception as e:
-        return JsonResponse({'error': str(e)}, status=500)
