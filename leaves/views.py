@@ -217,14 +217,14 @@ def create_leave(request):
 def hod_requests(request):
 
     status = request.GET.get("status", "pending")
-    leaves = LeaveRequest.objects.all()
+    leaves = LeaveRequest.objects.filter(student__department=request.user.department)
 
     if status == "pending":
         leaves = leaves.filter(status="pending_hod", student__department=request.user.department)
     elif status == "approved":
-        leaves = leaves.filter(status__in=["pending_manager", "pending_warden", "approved", "out", "in"])
+        leaves = leaves.filter(status__in=["pending_manager", "pending_warden", "approved", "out", "in"], student__department=request.user.department)
     elif status == "rejected":
-        leaves = leaves.filter(status="hod_rejected")
+        leaves = leaves.filter(status="hod_rejected", student__department=request.user.department)
 
     data = []
     for l in leaves:
