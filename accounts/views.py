@@ -141,7 +141,6 @@ def fix_photo_names(request):
         name = sp.photo.name
         without_ext = os.path.splitext(name)[0]
         if name != without_ext:
-            sp.photo.name = without_ext
-            sp.save(update_fields=['photo'])
+            StudentProfile.objects.filter(pk=sp.pk).update(photo=without_ext)
             fixed.append(f"{name} → {without_ext}")
     return JsonResponse({"fixed": fixed, "count": len(fixed)})
