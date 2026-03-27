@@ -51,7 +51,7 @@ def profile_view(request):
                 "personal_contact": sp.personal_contact,
                 "parent_contact":   sp.parent_contact,
                 "department":       sp.department,
-                "photo":            request.build_absolute_uri(sp.photo.url) if sp.photo else "",
+                "photo":            sp.photo.url if sp.photo else "",
             })
         except Exception:
             pass
@@ -118,4 +118,4 @@ def load_data(request):
         call_command('loaddata', 'datadump.json')
         return JsonResponse({'status': 'Data loaded successfully!'})
     except Exception as e:
-        return JsonResponse({'error': str(e)}, status=500)    
+        return JsonResponse({'error': str(e)}, status=500)
