@@ -314,19 +314,26 @@ def manager_requests(request):
 @require_http_methods(["POST"])
 
 def manager_action(request, leave_id):
-    leave = LeaveRequest.objects.get(id=leave_id)
-    action = request.POST.get("action")
-    comment = request.POST.get("comment", "")
+    try:
+        leave = LeaveRequest.objects.get(id=leave_id)
+    except LeaveRequest.DoesNotExist:
+        return JsonResponse({"error": "Leave not found"}, status=404)
+
+    data = json.loads(request.body)      # ← parse JSON
+    action = data.get("action")
+    comment = data.get("comment", "")
 
     if action == "reject":
         leave.status = "manager_rejected"
     elif action == "approve":
         leave.status = "pending_warden"
+    else:
+        return JsonResponse({"error": f"Invalid action: '{action}'"}, status=400)
+
     if comment:
         leave.manager_comment = comment.strip()
     leave.save()
     return JsonResponse({"message": "Manager action recorded"})
-
 
 
 @role_required(["warden"])
@@ -389,8 +396,9 @@ def warden_action(request, leave_id):
     except LeaveRequest.DoesNotExist:
         return JsonResponse({"error": "Leave not found"}, status=404)
 
-    action  = request.POST.get("action")
-    comment = request.POST.get("comment", "")
+    data = json.loads(request.body)      # ← parse JSON
+    action  = data.get("action")
+    comment = data.get("comment", "")
 
     if action == "reject":
         leave.status = "warden_rejected"
@@ -415,5 +423,4 @@ def warden_action(request, leave_id):
 
         return JsonResponse({"message": "Approved", "token": str(qr.token)})
 
-    return JsonResponse({"error": "Invalid action"}, status=400)
-
+    return JsonResponse({"error": f"Invalid action: '{action}'"}, status=400)
