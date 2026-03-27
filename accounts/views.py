@@ -126,4 +126,6 @@ def debug_env(request):
     return JsonResponse({
         "cloud_name": os.environ.get("CLOUDINARY_CLOUD_NAME"),
         "api_key": os.environ.get("CLOUDINARY_API_KEY"),
+        "default_file_storage": settings.DEFAULT_FILE_STORAGE,
+        "media_url": getattr(settings, "MEDIA_URL", "NOT SET"),
     })
