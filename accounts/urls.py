@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import debug_env, fix_photo_names, login_view, logout_view, profile_view, change_password_view
+from .views import  login_view, logout_view, profile_view, change_password_view
 from .views import load_data
 
 
