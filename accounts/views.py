@@ -122,14 +122,23 @@ def load_data(request):
 
 
 def debug_env(request):
-    import os
+    import cloudinary
+    import cloudinary.api
     from django.conf import settings
     from accounts.models import StudentProfile
+    
     sp = StudentProfile.objects.first()
+    
+    try:
+        result = cloudinary.api.resource(sp.photo.name)
+        cloudinary_url = result.get('secure_url')
+    except Exception as e:
+        cloudinary_url = str(e)
+    
     return JsonResponse({
-        "default_file_storage": settings.DEFAULT_FILE_STORAGE,
         "photo_name": sp.photo.name,
         "photo_url": sp.photo.url,
+        "cloudinary_direct": cloudinary_url,
     })
 
 def fix_photo_names(request):
