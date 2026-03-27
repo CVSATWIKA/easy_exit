@@ -51,7 +51,7 @@ def profile_view(request):
                 "personal_contact": sp.personal_contact,
                 "parent_contact":   sp.parent_contact,
                 "department":       sp.department,
-                "photo":            sp.photo.url if sp.photo else "",
+                "photo":            f"https://res.cloudinary.com/{os.environ.get('CLOUDINARY_CLOUD_NAME')}/image/upload/{sp.photo.name}" if sp.photo else "",
             })
         except Exception:
             pass

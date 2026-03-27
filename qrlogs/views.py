@@ -3,7 +3,13 @@ from django.utils import timezone
 from .models import QRSession
 from django.views.decorators.csrf import csrf_exempt
 from accounts.decorators import role_required
+import os
 
+
+def _photo_url(photo):
+    if not photo:
+        return ""
+    return f"https://res.cloudinary.com/{os.environ.get('CLOUDINARY_CLOUD_NAME')}/image/upload/{photo.name}"
 
 
 @csrf_exempt
@@ -20,7 +26,7 @@ def scan_qr(request, token):
     # ── FIRST SCAN → student going OUT ─────────────────────────
     if not qr.is_out_scanned:
         qr.is_out_scanned  = True
-        qr.scanned_out_at  = now          # ← record OUT timestamp
+        qr.scanned_out_at  = now
         leave.status = "out"
         leave.save()
         qr.save()
@@ -29,23 +35,22 @@ def scan_qr(request, token):
             "status": "OUT",
             "message": "✅ Student checked OUT",
             "student": {
-                "roll_no":  student.roll_no,
-                "name":     student.user.get_full_name() or student.user.username,
+                "roll_no":   student.roll_no,
+                "name":      student.user.get_full_name() or student.user.username,
                 "hostel_no": student.hostel_no,
-                "room_no":  student.room_no,
-                "photo":    student.photo.url if student.photo else "",
+                "room_no":   student.room_no,
+                "photo":     _photo_url(student.photo),
             }
         })
-    
+
     # ── SECOND SCAN → student coming IN ────────────────────────
     if qr.is_out_scanned and not qr.is_in_scanned:
         qr.is_in_scanned  = True
-        qr.scanned_in_at  = now           # ← record IN timestamp
+        qr.scanned_in_at  = now
         leave.status = "in"
         leave.save()
         qr.save()
 
-        # Calculate how long the student was out
         duration     = now - qr.scanned_out_at
         total_mins   = int(duration.total_seconds() // 60)
         hours, mins  = divmod(total_mins, 60)
@@ -55,14 +60,13 @@ def scan_qr(request, token):
             "status": "IN",
             "message": f"✅ Student returned (was out for {duration_str})",
             "student": {
-                "roll_no":  student.roll_no,
-                "name":     student.user.get_full_name() or student.user.username,
+                "roll_no":   student.roll_no,
+                "name":      student.user.get_full_name() or student.user.username,
                 "hostel_no": student.hostel_no,
-                "room_no":  student.room_no,
-                "photo":    student.photo.url if student.photo else "",
+                "room_no":   student.room_no,
+                "photo":     _photo_url(student.photo),
             }
         })
 
     # ── ALREADY USED ────────────────────────────────────────────
     return JsonResponse({"error": "QR already used — student has returned."}, status=400)
-
