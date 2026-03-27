@@ -244,23 +244,42 @@ def hod_requests(request):
 @csrf_exempt
 @role_required(["hod"])
 @require_http_methods(["POST"])
-
 def hod_action(request, leave_id):
-    leave = LeaveRequest.objects.get(id=leave_id)
-    data = json.loads(request.body) 
-    action = request.POST.get("action")
-    comment = request.POST.get("comment", "")
+    try:
+        leave = LeaveRequest.objects.get(id=leave_id)
+    except LeaveRequest.DoesNotExist:
+        return JsonResponse({"error": "Leave not found"}, status=404)
+
+    # ── DEBUG: print what Django actually received ──
+    print("Content-Type:", request.META.get("CONTENT_TYPE"))
+    print("request.POST:", request.POST)
+    print("request.body:", request.body)
+
+    try:
+        data = json.loads(request.body)
+    except json.JSONDecodeError:
+        return JsonResponse({"error": "Invalid JSON", "body": request.body.decode()}, status=400)
+
+    action = data.get("action")
+    comment = data.get("comment", "")
+
+    print("action:", action)  # ← what is this?
+    print("leave current status:", leave.status)
 
     if action == "reject":
         leave.status = "hod_rejected"
     elif action == "approve":
         leave.status = "pending_manager"
+    else:
+        return JsonResponse({"error": f"Invalid action received: '{action}'"}, status=400)
+
     if comment:
         leave.hod_comment = comment.strip()
+
     leave.save()
+    print("leave status after save:", LeaveRequest.objects.get(id=leave_id).status)
 
-    return JsonResponse({"message": "Action recorded"})
-
+    return JsonResponse({"message": "Action recorded", "new_status": leave.status})
 
 
 @role_required(["manager"])
