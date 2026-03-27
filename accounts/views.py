@@ -51,7 +51,7 @@ def profile_view(request):
                 "personal_contact": sp.personal_contact,
                 "parent_contact":   sp.parent_contact,
                 "department":       sp.department,
-                "photo":            sp.photo.url if sp.photo else "",
+                "photo":            request.build_absolute_uri(sp.photo.url) if sp.photo else "",
             })
         except Exception:
             pass
