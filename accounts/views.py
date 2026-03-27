@@ -121,35 +121,3 @@ def load_data(request):
         return JsonResponse({'error': str(e)}, status=500)
 
 
-def debug_env(request):
-    import cloudinary
-    import cloudinary.api
-    from django.conf import settings
-    from accounts.models import StudentProfile
-    
-    sp = StudentProfile.objects.first()
-    
-    try:
-        result = cloudinary.api.resource(sp.photo.name)
-        cloudinary_url = result.get('secure_url')
-    except Exception as e:
-        cloudinary_url = str(e)
-    
-    return JsonResponse({
-        "photo_name": sp.photo.name,
-        "photo_url": sp.photo.url,
-        "cloudinary_direct": cloudinary_url,
-    })
-
-def fix_photo_names(request):
-    import os
-    from accounts.models import StudentProfile
-    profiles = StudentProfile.objects.exclude(photo='')
-    fixed = []
-    for sp in profiles:
-        name = sp.photo.name
-        without_ext = os.path.splitext(name)[0]
-        if name != without_ext:
-            StudentProfile.objects.filter(pk=sp.pk).update(photo=without_ext)
-            fixed.append(f"{name} → {without_ext}")
-    return JsonResponse({"fixed": fixed, "count": len(fixed)})

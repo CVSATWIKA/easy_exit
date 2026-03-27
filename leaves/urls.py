@@ -25,5 +25,5 @@ urlpatterns = [
     path("warden/action/<int:leave_id>/", warden_action),
     path("warden/tracking/",              warden_tracking),  # ← new
 
-    path("warden/live-outside/",          warden_live_outside), 
+    path("warden/live_outside/",          warden_live_outside), 
  ] # ← new]

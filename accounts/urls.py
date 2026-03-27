@@ -9,6 +9,4 @@ urlpatterns = [
     path("change-password/", change_password_view, name="change-password"),
     path("load-data/",       load_data,            name="load-data"),
     path("logout/",          logout_view,          name="logout"),
-    path("debug/", debug_env, name="debug"),
-    path("fix-photos/", fix_photo_names, name="fix-photos"),
-]
+    ]
