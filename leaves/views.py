@@ -247,6 +247,7 @@ def hod_requests(request):
 
 def hod_action(request, leave_id):
     leave = LeaveRequest.objects.get(id=leave_id)
+    data = json.loads(request.body) 
     action = request.POST.get("action")
     comment = request.POST.get("comment", "")
 
