@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'cloudinary_storage',
 ]
 
+SESSION_ENGINE = "django.contrib.sessions.backends.db"
 # ── Middleware ───────────────────────────────────────────────
 MIDDLEWARE = [
     
@@ -173,7 +174,7 @@ CSRF_COOKIE_SAMESITE    = 'None'
 CSRF_COOKIE_SECURE      = True
 
 
-
+SESSION_COOKIE_DOMAIN = None
 
 SESSION_COOKIE_HTTPONLY = True
 
