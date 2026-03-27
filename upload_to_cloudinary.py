@@ -35,16 +35,18 @@ def upload_all():
 
     for filename in files:
         filepath = os.path.join(PHOTOS_DIR, filename)
-        # public_id must match what Django stored in the DB:
-        # e.g.  student_photos/0530  (no extension)
-        public_id = f"student_photos/{os.path.splitext(filename)[0]}"
+        # public_id includes extension to match exactly what Django stored in DB
+        # e.g.  student_photos/1731.jpeg
+        public_id = f"student_photos/{filename}"
 
         try:
             result = cloudinary.uploader.upload(
                 filepath,
-                public_id    = public_id,
-                overwrite    = True,
-                resource_type = "image",
+                public_id       = public_id,
+                overwrite       = True,
+                resource_type   = "image",
+                use_filename    = False,
+                unique_filename = False,
             )
             print(f"  ✅ {filename}  →  {result['secure_url']}")
             success += 1
