@@ -124,9 +124,10 @@ def load_data(request):
 def debug_env(request):
     import os
     from django.conf import settings
+    from accounts.models import StudentProfile
+    sp = StudentProfile.objects.first()
     return JsonResponse({
-        "cloud_name": os.environ.get("CLOUDINARY_CLOUD_NAME"),
-        "api_key": os.environ.get("CLOUDINARY_API_KEY"),
         "default_file_storage": settings.DEFAULT_FILE_STORAGE,
-        "media_url": getattr(settings, "MEDIA_URL", "NOT SET"),
+        "photo_name": sp.photo.name,
+        "photo_url": sp.photo.url,
     })
