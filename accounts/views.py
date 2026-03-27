@@ -119,3 +119,11 @@ def load_data(request):
         return JsonResponse({'status': 'Data loaded successfully!'})
     except Exception as e:
         return JsonResponse({'error': str(e)}, status=500)
+
+
+def debug_env(request):
+    import os
+    return JsonResponse({
+        "cloud_name": os.environ.get("CLOUDINARY_CLOUD_NAME"),
+        "api_key": os.environ.get("CLOUDINARY_API_KEY"),
+    })
