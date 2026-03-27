@@ -13,9 +13,6 @@ def scan_qr(request, token):
     except QRSession.DoesNotExist:
         return JsonResponse({"error": "Invalid QR"}, status=400)
 
-    if qr.expires_at is not None and timezone.now() > qr.expires_at:
-        return JsonResponse({"error": "QR expired"}, status=400)
-
     leave   = qr.leave_request
     student = leave.student
     now     = timezone.now()
