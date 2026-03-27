@@ -123,6 +123,7 @@ def load_data(request):
 
 def debug_env(request):
     import os
+    from django.conf import settings
     return JsonResponse({
         "cloud_name": os.environ.get("CLOUDINARY_CLOUD_NAME"),
         "api_key": os.environ.get("CLOUDINARY_API_KEY"),
