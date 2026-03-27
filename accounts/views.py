@@ -131,3 +131,17 @@ def debug_env(request):
         "photo_name": sp.photo.name,
         "photo_url": sp.photo.url,
     })
+
+def fix_photo_names(request):
+    import os
+    from accounts.models import StudentProfile
+    profiles = StudentProfile.objects.exclude(photo='')
+    fixed = []
+    for sp in profiles:
+        name = sp.photo.name
+        without_ext = os.path.splitext(name)[0]
+        if name != without_ext:
+            sp.photo.name = without_ext
+            sp.save(update_fields=['photo'])
+            fixed.append(f"{name} → {without_ext}")
+    return JsonResponse({"fixed": fixed, "count": len(fixed)})
