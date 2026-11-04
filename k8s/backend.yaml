@@ -1,0 +1,43 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      initContainers:
+        - name: wait-for-postgres
+          image: postgres:16
+          command:
+            - sh
+            - -c
+            - |
+              until pg_isready -h postgres-service -p 5432; do
+                echo "Waiting for PostgreSQL..."
+                sleep 3
+              done
+      containers:
+        - name: backend
+          image: easy-exit-backend:1.0
+          imagePullPolicy: IfNotPresent
+          command:
+            - sh
+            - -c
+            - python manage.py migrate &&
+              gunicorn easy_exit_backend.wsgi:application --bind 0.0.0.0:8000
+          ports:
+            - containerPort: 8000
+          env:
+            - name: DATABASE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: easy-exit-db-secret
+                  key: DATABASE_URL

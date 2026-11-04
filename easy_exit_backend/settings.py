@@ -19,6 +19,7 @@ DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
+    'backend-service',
     '.onrender.com',
 ]
 
@@ -49,7 +50,6 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware', 
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -133,6 +133,8 @@ CORS_ALLOWED_ORIGINS = [
     'https://easyexit.netlify.app',
     "https://69c57e55a063c60008431ee2--easyexit.netlify.app",
     "https://69c579354fb3cd0008717880--easyexit.netlify.app",
+    'http://localhost:30080',
+    'http://localhost:18080',
 ]
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_HEADERS = [
@@ -153,6 +155,9 @@ CSRF_TRUSTED_ORIGINS = [
     'https://easy-exit-backend-1.onrender.com',
     'https://easyexit.netlify.app',
     "https://*.netlify.app",
+    'http://localhost:30080',
+    'http://localhost:30081',
+    'http://localhost:18080',
 ]
 
 REST_FRAMEWORK = {

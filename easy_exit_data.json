@@ -1,0 +1,1015 @@
+[
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$HqnyaoZi4B21m3loRI6sxu$ykmc5/1PuYf1dutLBDCwM3ko2nxvZyJK8sfpZzq5VAY=",
+    "last_login": "2026-10-20T09:12:23.975Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "vishnusatwika14@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-12-28T07:02:04.243Z",
+    "role": "",
+    "department": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$dcSupNi0ZoInu57NPQsCnY$4vJdNT46QV1H7FNRPhGcdzrdGarv6BRCHd1K137DbDE=",
+    "last_login": "2026-03-26T04:13:18.690Z",
+    "is_superuser": false,
+    "username": "warden1",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-01-17T05:44:58.872Z",
+    "role": "warden",
+    "department": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$5OBBKMvOPPKy0kl2H6qRm7$1gJHxhCflPe34IQHT3QTB7sWbHE8I6L+pxyZ+9mPPMI=",
+    "last_login": "2026-03-26T04:09:37.162Z",
+    "is_superuser": false,
+    "username": "security1",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-01-17T06:35:10.691Z",
+    "role": "security",
+    "department": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$nyCbdLb0k9Eplyj3hO9IzS$0tBNLFqbfjIUjc9aaOccLYGoZh/yDl9UMEMYHEYd32g=",
+    "last_login": "2026-03-26T03:01:57.883Z",
+    "is_superuser": false,
+    "username": "hod_it",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-01-17T07:13:27Z",
+    "role": "hod",
+    "department": "IT",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$zKdy1LgNeon850f2avpxoC$AmJLHerwz0drBg5menr7k2yBc0R98RLfQb1WmMbL+DY=",
+    "last_login": "2026-03-26T03:04:01.572Z",
+    "is_superuser": false,
+    "username": "manager",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-01-17T07:13:27.834Z",
+    "role": "manager",
+    "department": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$kxj4IbuwTd6KOde48yTBCy$LnDR9BVhyJYGlf3Wv9cuXT81hHh/yNPqrb/j8wik6JU=",
+    "last_login": "2026-03-25T17:32:49Z",
+    "is_superuser": false,
+    "username": "vishnu",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-15T14:19:01Z",
+    "role": "student",
+    "department": "IT",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$EF2XPP06PKFrXtiLsHcO5o$/JxdLkyMm5/MOUVg7DFibVuhyK/kL1cCZ5ZTOOwQLkw=",
+    "last_login": "2026-03-26T04:16:39.096Z",
+    "is_superuser": false,
+    "username": "hod_cse",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-25T18:27:16.223Z",
+    "role": "hod",
+    "department": "CSE",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$OcmyYQII50OYGtiMXirRg3$vx7f4a19siDjW7z4DoZ+0ZeXhNVWQJR44tVdfyrE6QE=",
+    "last_login": "2026-03-26T02:59:45.842Z",
+    "is_superuser": false,
+    "username": "hod_ece",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-25T18:29:00.947Z",
+    "role": "hod",
+    "department": "ECE",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$uyJhIOgHu1LbM7FdnXA8q8$IJheCTn7ruC8QInnQ+/rCHxpNwtHNogYOnMiiCyl9uA=",
+    "last_login": "2026-03-26T02:52:52.714Z",
+    "is_superuser": false,
+    "username": "hod_eee",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-25T18:29:51.562Z",
+    "role": "hod",
+    "department": "EEE",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$Hd4yfC2vhQvyyfMJIR2A04$oR6IMoAlxLnScLJ4ofdteDxCaJ2zvBX85O7HZyseBPQ=",
+    "last_login": "2026-03-25T20:11:18.948Z",
+    "is_superuser": false,
+    "username": "hod_etm",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-25T18:30:33.279Z",
+    "role": "hod",
+    "department": "ETM",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$jK78vPtaMWxvfwmuV1zPs1$jp7mIsEyfJ9S2aAAbyICXoSGqIjaJxoih9K2FERco7w=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "hod_csm",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-25T18:31:26.777Z",
+    "role": "hod",
+    "department": "CSM",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$GOKxVrFbjqUVNOhhTj8Her$lKgRHbBPoJvE+Z8sNo1IGnBsXCWV/e7KZ2N2X53ItTE=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "hod_csd",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-25T18:32:14.412Z",
+    "role": "hod",
+    "department": "CSD",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$rbXoDMmbslWZ80eHx0VW4k$EiWioxBmUPl010yyxWCeP4waeXPo00yD6UTygpXy5QU=",
+    "last_login": "2026-03-25T20:28:08.736Z",
+    "is_superuser": false,
+    "username": "23251A1731",
+    "first_name": "Shirisha",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-25T18:38:56Z",
+    "role": "student",
+    "department": "ETM",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$mE9so18ggrsGgmROuJKnCK$XigyxBGJiejvXLkGR5vboDOBDxeLpFKK7Rgw+UuAZjg=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "24251A12A4",
+    "first_name": "Sindhuja",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-25T18:56:22Z",
+    "role": "student",
+    "department": "IT",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$CNdKh2E1v0nGF4q0pOJWAW$/aUZyc1AzzAO6eU0Noz7n/WMlKBl9/qshuCgW9ECxr8=",
+    "last_login": "2026-03-26T03:02:41.250Z",
+    "is_superuser": false,
+    "username": "24251A05D1",
+    "first_name": "Neeriksha",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-25T18:57:03Z",
+    "role": "student",
+    "department": "CSE",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$BcjEFfVws3IQxGE3vfUFjf$6XOYDCMh5mQGIre8N8Ef0tZnIm3UrpXKn3uO6cRi538=",
+    "last_login": "2026-03-26T02:50:55.235Z",
+    "is_superuser": false,
+    "username": "24251A0288",
+    "first_name": "VANSHIKA",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-25T18:57:39Z",
+    "role": "student",
+    "department": "EEE",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$iPS6xvLcif3tEB430P1srK$U8LSg3qAL8Bxg6MwBKFMsXIRjh6YrJPtZlcq13NKuTg=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "24251A6625",
+    "first_name": "MADHU HASITA",
+    "last_name": "REDDY",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-25T18:58:13Z",
+    "role": "student",
+    "department": "CSM",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$rQ5LTwd9vNopvmrcySODIG$Gna1KuZQqt4BFOERSX8HZo3W6J9Qcep/eQjNB0Z5knU=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "24251A6762",
+    "first_name": "SARAYU",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-25T18:59:11Z",
+    "role": "student",
+    "department": "CSD",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$SOQGuod4ubPx7WqpXw5w6q$MK4mHeUbbIMLfFftLDhh5FL2zw6NaC2Co2I2+3SxDlM=",
+    "last_login": "2026-03-25T20:41:58.332Z",
+    "is_superuser": false,
+    "username": "23251A0530",
+    "first_name": "NIDHI",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-25T19:00:47Z",
+    "role": "student",
+    "department": "CSE",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$N1YUtoJ398iV1AqaEe0qyk$/7Ju471C83hf6KltOvZRTq4jKnYs/m26wp6sZsNRHlg=",
+    "last_login": "2026-03-26T04:12:21.745Z",
+    "is_superuser": false,
+    "username": "23251A0466",
+    "first_name": "AFNAAN",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-25T19:01:26Z",
+    "role": "student",
+    "department": "ECE",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$aDjLVuywx8RWffoPBUhtmf$GCHx8zsSUbNVMjORzXThZrYBPL9EB8IOsLahzIt6NWU=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "24251A05Q6",
+    "first_name": "SIRI",
+    "last_name": "MAHITA",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-25T19:02:00Z",
+    "role": "student",
+    "department": "CSE",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$jLobo9kHVGpXUpt3E1hiJF$0H363htGRDYmVprlJBxAIXnFE/jJlSGitsn9vcRE7ME=",
+    "last_login": "2026-03-26T03:00:16.141Z",
+    "is_superuser": false,
+    "username": "24251A1250",
+    "first_name": "POOJA",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-25T19:02:43Z",
+    "role": "student",
+    "department": "IT",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$VQdOX6HFMYJQQkTqxWQ243$SzgSuW79G3Qo3Ks3eFvHrOPU1bLnZJoy2SnsUnLqOXI=",
+    "last_login": "2026-03-26T03:12:27.321Z",
+    "is_superuser": false,
+    "username": "25251A0454",
+    "first_name": "SAHASRA",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-25T19:03:12Z",
+    "role": "student",
+    "department": "ECE",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$bl44HJfRdH8lkSfhC5yneA$hXxt6b9Y31EpVk8WCew9ACPhtVhxbdpjaR765uJ5Kfg=",
+    "last_login": "2026-03-25T20:43:08.415Z",
+    "is_superuser": false,
+    "username": "25251A05G2",
+    "first_name": "JAGRUTHI",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-25T19:03:48Z",
+    "role": "student",
+    "department": "CSE",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$zAhtYjlD31YAj6f6CjX438$zTVbieEVlBPqJbd9b26DcHesBwByUn3xtkIAFYbAByk=",
+    "last_login": "2026-03-26T03:10:31.757Z",
+    "is_superuser": false,
+    "username": "25251A04D7",
+    "first_name": "RUPA",
+    "last_name": "SRI",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-25T19:04:23Z",
+    "role": "student",
+    "department": "ECE",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$PdUMw9t0nfnRPzixZbbEnX$LBawpzoPzIkkvem/KUbxJvjmMMaeQjZ0l3ig3vfDfnA=",
+    "last_login": "2026-03-26T02:56:12.195Z",
+    "is_superuser": false,
+    "username": "25251A04F1",
+    "first_name": "HEMA",
+    "last_name": "VARSHINI",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-25T19:04:56Z",
+    "role": "student",
+    "department": "ECE",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$Cev1PkvYnuv8A96qWVrZy4$SRPYweLpaUPiJ3oueH1xRimkcT1C3YOuoBt0oib2ZrA=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "ADMIN",
+    "first_name": "",
+    "last_name": "",
+    "email": "vishnusatwika222@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-03-26T09:52:48.961Z",
+    "role": "",
+    "department": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 6,
+  "fields": {
+    "user": [
+      "23251A1731"
+    ],
+    "roll_no": "23251A1731",
+    "department": "ETM",
+    "year": "3",
+    "class_name": "ETM",
+    "hostel_no": "H2",
+    "room_no": "323",
+    "personal_contact": "9063956838",
+    "parent_contact": "9063956838",
+    "photo": "student_photos/1731.jpeg"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 7,
+  "fields": {
+    "user": [
+      "24251A12A4"
+    ],
+    "roll_no": "24251A12A4",
+    "department": "IT",
+    "year": "2",
+    "class_name": "IT-B",
+    "hostel_no": "H1",
+    "room_no": "217",
+    "personal_contact": "6300169503",
+    "parent_contact": "9493659050",
+    "photo": "student_photos/12A4.jpeg"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 8,
+  "fields": {
+    "user": [
+      "24251A05D1"
+    ],
+    "roll_no": "24251A05D1",
+    "department": "CSE",
+    "year": "2",
+    "class_name": "CSE-B",
+    "hostel_no": "H1",
+    "room_no": "114",
+    "personal_contact": "9573748868",
+    "parent_contact": "7893559998",
+    "photo": "student_photos/05D1.jpeg"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 9,
+  "fields": {
+    "user": [
+      "24251A0288"
+    ],
+    "roll_no": "24251A0288",
+    "department": "EEE",
+    "year": "2",
+    "class_name": "EEE-B",
+    "hostel_no": "H1",
+    "room_no": "315",
+    "personal_contact": "8639423525",
+    "parent_contact": "7674076143",
+    "photo": "student_photos/0288.jpeg"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 10,
+  "fields": {
+    "user": [
+      "24251A6625"
+    ],
+    "roll_no": "24251A6625",
+    "department": "CSM",
+    "year": "2",
+    "class_name": "CSM-A",
+    "hostel_no": "H1",
+    "room_no": "219",
+    "personal_contact": "9247627789",
+    "parent_contact": "8374052621",
+    "photo": "student_photos/6625.jpeg"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 11,
+  "fields": {
+    "user": [
+      "24251A6762"
+    ],
+    "roll_no": "24251A6762",
+    "department": "CSD",
+    "year": "2",
+    "class_name": "CSD-A",
+    "hostel_no": "H1",
+    "room_no": "209",
+    "personal_contact": "9247275821",
+    "parent_contact": "9247275128",
+    "photo": "student_photos/6762.jpeg"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 12,
+  "fields": {
+    "user": [
+      "23251A0530"
+    ],
+    "roll_no": "23251A0530",
+    "department": "CSE",
+    "year": "3",
+    "class_name": "CSE-A",
+    "hostel_no": "H2",
+    "room_no": "223",
+    "personal_contact": "9640164706",
+    "parent_contact": "76670036837",
+    "photo": "student_photos/0530.jpeg"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 13,
+  "fields": {
+    "user": [
+      "23251A0466"
+    ],
+    "roll_no": "23251A0466",
+    "department": "ECE",
+    "year": "3",
+    "class_name": "ECE-B",
+    "hostel_no": "H2",
+    "room_no": "112",
+    "personal_contact": "8523818267",
+    "parent_contact": "8523818267",
+    "photo": "student_photos/0466.jpeg"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 14,
+  "fields": {
+    "user": [
+      "24251A05Q6"
+    ],
+    "roll_no": "24251A05Q6",
+    "department": "CSE",
+    "year": "3",
+    "class_name": "CSE-D",
+    "hostel_no": "H3",
+    "room_no": "112",
+    "personal_contact": "6303422838",
+    "parent_contact": "9441571144",
+    "photo": "student_photos/05Q6.jpeg"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 15,
+  "fields": {
+    "user": [
+      "24251A1250"
+    ],
+    "roll_no": "24251A1250",
+    "department": "IT",
+    "year": "2",
+    "class_name": "IT-A",
+    "hostel_no": "H3",
+    "room_no": "312",
+    "personal_contact": "9392391091",
+    "parent_contact": "9392566680",
+    "photo": "student_photos/1250.jpeg"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 16,
+  "fields": {
+    "user": [
+      "25251A0454"
+    ],
+    "roll_no": "25251A0454",
+    "department": "ECE",
+    "year": "1",
+    "class_name": "ECE-A",
+    "hostel_no": "H3",
+    "room_no": "212",
+    "personal_contact": "9381608534",
+    "parent_contact": "9138608534",
+    "photo": "student_photos/0454.jpeg"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 17,
+  "fields": {
+    "user": [
+      "25251A05G2"
+    ],
+    "roll_no": "25251A05G2",
+    "department": "CSE",
+    "year": "1",
+    "class_name": "CSE-C",
+    "hostel_no": "H1",
+    "room_no": "101",
+    "personal_contact": "8688439412",
+    "parent_contact": "8979781290",
+    "photo": "student_photos/05G2.jpeg"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 18,
+  "fields": {
+    "user": [
+      "25251A04D7"
+    ],
+    "roll_no": "25251A04D7",
+    "department": "ECE",
+    "year": "1",
+    "class_name": "ECE-C",
+    "hostel_no": "H1",
+    "room_no": "301",
+    "personal_contact": "9346890375",
+    "parent_contact": "9010081374",
+    "photo": "student_photos/04D7.jpeg"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 19,
+  "fields": {
+    "user": [
+      "25251A04F1"
+    ],
+    "roll_no": "25251A04F1",
+    "department": "ECE",
+    "year": "1",
+    "class_name": "ECE-C",
+    "hostel_no": "H1",
+    "room_no": "201",
+    "personal_contact": "9177215916",
+    "parent_contact": "9652491672",
+    "photo": "student_photos/04F1.jpeg"
+  }
+},
+{
+  "model": "leaves.leaverequest",
+  "pk": 23,
+  "fields": {
+    "student": 6,
+    "pass_type": "gate",
+    "reason": "project work",
+    "out_datetime": "2026-03-26T01:40:00Z",
+    "in_datetime": "2026-03-26T11:40:00Z",
+    "status": "manager_rejected",
+    "hod_comment": "do well",
+    "manager_comment": null,
+    "warden_comment": null,
+    "created_at": "2026-03-25T20:11:01.241Z"
+  }
+},
+{
+  "model": "leaves.leaverequest",
+  "pk": 24,
+  "fields": {
+    "student": 12,
+    "pass_type": "gate",
+    "reason": "english project",
+    "out_datetime": "2026-03-26T08:04:00Z",
+    "in_datetime": "2026-03-26T15:04:00Z",
+    "status": "in",
+    "hod_comment": null,
+    "manager_comment": null,
+    "warden_comment": null,
+    "created_at": "2026-03-25T20:34:56.189Z"
+  }
+},
+{
+  "model": "leaves.leaverequest",
+  "pk": 25,
+  "fields": {
+    "student": 17,
+    "pass_type": "gate",
+    "reason": "sister marriage",
+    "out_datetime": "2026-03-26T10:11:00Z",
+    "in_datetime": "2026-03-26T18:11:00Z",
+    "status": "approved",
+    "hod_comment": null,
+    "manager_comment": null,
+    "warden_comment": null,
+    "created_at": "2026-03-25T20:41:44.152Z"
+  }
+},
+{
+  "model": "leaves.leaverequest",
+  "pk": 26,
+  "fields": {
+    "student": 9,
+    "pass_type": "gate",
+    "reason": "hospital",
+    "out_datetime": "2026-03-26T10:22:00Z",
+    "in_datetime": "2026-03-26T18:22:00Z",
+    "status": "out",
+    "hod_comment": null,
+    "manager_comment": null,
+    "warden_comment": null,
+    "created_at": "2026-03-26T02:52:15.372Z"
+  }
+},
+{
+  "model": "leaves.leaverequest",
+  "pk": 27,
+  "fields": {
+    "student": 16,
+    "pass_type": "gate",
+    "reason": "Hackathon",
+    "out_datetime": "2026-03-26T09:30:00Z",
+    "in_datetime": "2026-03-26T18:30:00Z",
+    "status": "out",
+    "hod_comment": null,
+    "manager_comment": null,
+    "warden_comment": null,
+    "created_at": "2026-03-26T02:55:12.542Z"
+  }
+},
+{
+  "model": "leaves.leaverequest",
+  "pk": 28,
+  "fields": {
+    "student": 19,
+    "pass_type": "gate",
+    "reason": "bank account verification",
+    "out_datetime": "2026-03-26T10:30:00Z",
+    "in_datetime": "2026-03-26T16:00:00Z",
+    "status": "out",
+    "hod_comment": null,
+    "manager_comment": null,
+    "warden_comment": null,
+    "created_at": "2026-03-26T02:57:18.155Z"
+  }
+},
+{
+  "model": "leaves.leaverequest",
+  "pk": 29,
+  "fields": {
+    "student": 18,
+    "pass_type": "gate",
+    "reason": "Health checkup",
+    "out_datetime": "2026-03-26T11:00:00Z",
+    "in_datetime": "2026-03-26T16:30:00Z",
+    "status": "out",
+    "hod_comment": null,
+    "manager_comment": null,
+    "warden_comment": null,
+    "created_at": "2026-03-26T02:59:21.537Z"
+  }
+},
+{
+  "model": "leaves.leaverequest",
+  "pk": 30,
+  "fields": {
+    "student": 15,
+    "pass_type": "gate",
+    "reason": "Project ",
+    "out_datetime": "2026-03-26T10:00:00Z",
+    "in_datetime": "2026-03-26T17:30:00Z",
+    "status": "out",
+    "hod_comment": null,
+    "manager_comment": null,
+    "warden_comment": null,
+    "created_at": "2026-03-26T03:01:29.184Z"
+  }
+},
+{
+  "model": "leaves.leaverequest",
+  "pk": 31,
+  "fields": {
+    "student": 8,
+    "pass_type": "gate",
+    "reason": "hospital checkup",
+    "out_datetime": "2026-03-26T10:35:00Z",
+    "in_datetime": "2026-03-26T16:00:00Z",
+    "status": "out",
+    "hod_comment": null,
+    "manager_comment": null,
+    "warden_comment": null,
+    "created_at": "2026-03-26T03:03:18.942Z"
+  }
+},
+{
+  "model": "qrlogs.qrsession",
+  "pk": 13,
+  "fields": {
+    "leave_request": 24,
+    "token": "ce529a43-2a6e-4fc8-a350-ada6be087df1",
+    "expires_at": "2026-03-26T20:36:52.486Z",
+    "is_out_scanned": true,
+    "is_in_scanned": true,
+    "scanned_out_at": "2026-03-25T20:38:10.234Z",
+    "scanned_in_at": "2026-03-26T03:24:13.361Z"
+  }
+},
+{
+  "model": "qrlogs.qrsession",
+  "pk": 14,
+  "fields": {
+    "leave_request": 25,
+    "token": "a09f7c72-06d1-49b5-a122-0053db83eff0",
+    "expires_at": "2026-03-27T03:05:51.865Z",
+    "is_out_scanned": false,
+    "is_in_scanned": false,
+    "scanned_out_at": null,
+    "scanned_in_at": null
+  }
+},
+{
+  "model": "qrlogs.qrsession",
+  "pk": 15,
+  "fields": {
+    "leave_request": 26,
+    "token": "48cfe161-6585-4c6d-98ce-9acbca384ead",
+    "expires_at": "2026-03-27T03:07:28.722Z",
+    "is_out_scanned": true,
+    "is_in_scanned": false,
+    "scanned_out_at": "2026-03-26T03:15:16.344Z",
+    "scanned_in_at": null
+  }
+},
+{
+  "model": "qrlogs.qrsession",
+  "pk": 16,
+  "fields": {
+    "leave_request": 27,
+    "token": "e59efe73-77ce-4ec2-8693-8f1e7a73a4eb",
+    "expires_at": "2026-03-27T03:07:47.976Z",
+    "is_out_scanned": true,
+    "is_in_scanned": false,
+    "scanned_out_at": "2026-03-26T04:09:45.322Z",
+    "scanned_in_at": null
+  }
+},
+{
+  "model": "qrlogs.qrsession",
+  "pk": 17,
+  "fields": {
+    "leave_request": 28,
+    "token": "450a0726-e7a4-45f4-bc0a-34b36fa6f41d",
+    "expires_at": "2026-03-27T03:08:28.662Z",
+    "is_out_scanned": true,
+    "is_in_scanned": false,
+    "scanned_out_at": "2026-03-26T04:08:20.676Z",
+    "scanned_in_at": null
+  }
+},
+{
+  "model": "qrlogs.qrsession",
+  "pk": 18,
+  "fields": {
+    "leave_request": 29,
+    "token": "f6893188-80d1-4c6a-9f76-7ad3524cbc55",
+    "expires_at": "2026-03-27T03:08:55.147Z",
+    "is_out_scanned": true,
+    "is_in_scanned": false,
+    "scanned_out_at": "2026-03-26T04:08:45.456Z",
+    "scanned_in_at": null
+  }
+},
+{
+  "model": "qrlogs.qrsession",
+  "pk": 19,
+  "fields": {
+    "leave_request": 30,
+    "token": "e97404eb-da82-4420-9181-d81b8c85580e",
+    "expires_at": "2026-03-27T03:09:17.082Z",
+    "is_out_scanned": true,
+    "is_in_scanned": false,
+    "scanned_out_at": "2026-03-26T04:09:03.327Z",
+    "scanned_in_at": null
+  }
+},
+{
+  "model": "qrlogs.qrsession",
+  "pk": 20,
+  "fields": {
+    "leave_request": 31,
+    "token": "faf6d58a-e218-4875-922f-3e274c0d960d",
+    "expires_at": "2026-03-27T03:09:35.363Z",
+    "is_out_scanned": true,
+    "is_in_scanned": false,
+    "scanned_out_at": "2026-03-26T04:09:28.110Z",
+    "scanned_in_at": null
+  }
+}
+]
