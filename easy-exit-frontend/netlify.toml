@@ -1,0 +1,17 @@
+[[redirects]]
+  from = "/leave/*"
+  to = "https://easy-exit-backend-1.onrender.com/leave/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/accounts/*"
+  to = "https://easy-exit-backend-1.onrender.com/accounts/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/qr/*"
+  to = "https://easy-exit-backend-1.onrender.com/qr/:splat"
+  status = 200
+  force = true

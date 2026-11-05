@@ -1,0 +1,215 @@
+/* 🔥 GLOBAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f5f7fb;
+  overflow-x: hidden;
+}
+
+/* 🔥 APP LAYOUT */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* 🔥 SIDEBAR */
+.sidebar {
+  width: 250px;
+  background: linear-gradient(180deg, #0b1a2f, #132a4d);
+  color: white;
+  padding: 20px;
+  transition: 0.3s ease;
+}
+
+.sidebar h1 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.sidebar li:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar .active {
+  background: #00c2a8;
+}
+
+/* 🔥 MAIN CONTENT */
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* 🔥 CARDS */
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* 🔥 FLEX ROW */
+.row {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.row > * {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* 🔥 BUTTONS */
+button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #00c2a8;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #009e8a;
+}
+
+/* 🔥 TABLE */
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td, th {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+/* ── MOBILE RESPONSIVE ─────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* Stack sidebar + main vertically */
+  .dashboard-root {
+    flex-direction: column;
+  }
+
+  /* Sidebar becomes a top bar */
+  .sidebar {
+    width: 100% !important;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 12px 16px;
+    gap: 8px;
+  }
+
+  .sidebar-logo { display: none; }
+
+  .sidebar-nav,
+  .sidebar-footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .sidebar-btn {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  /* Main content full width */
+  .main-content {
+    width: 100% !important;
+    padding: 16px !important;
+  }
+
+  /* Cards full width */
+  .card {
+    padding: 16px !important;
+    border-radius: 12px !important;
+  }
+
+  /* Tables scroll horizontally */
+  .styled-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    font-size: 12px;
+  }
+
+  /* Stack form rows vertically */
+  .form-row {
+    flex-direction: column !important;
+  }
+
+  .form-group {
+    width: 100% !important;
+  }
+
+  /* Filter bar wraps */
+  .filter-bar {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .filter-bar input,
+  .filter-bar select {
+    width: 100%;
+    min-width: unset !important;
+  }
+
+  /* Stat cards wrap into 2 columns */
+  .stat-cards-row {
+    flex-wrap: wrap;
+  }
+
+  /* Page header smaller text */
+  .page-header h1 {
+    font-size: 20px;
+  }
+
+  .page-header p {
+    font-size: 13px;
+  }
+
+  /* Buttons full width in action cells */
+  .action-btns {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Tab bar scrollable */
+  .tab-bar {
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+}

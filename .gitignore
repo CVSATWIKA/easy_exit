@@ -1,21 +1,37 @@
+
 # Python
 __pycache__/
 *.py[cod]
 *.pyo
-.env
+*.pyd
+
+# Virtual environments
 venv/
 env/
+.venv/
+
+# Environment variables
+.env
+.env.*
+!.env.example
 
 # Django
 db.sqlite3
 media/
 staticfiles/
 
+# Node.js
 node_modules/
-package.json
-package-lock.json
-# OS
-.DS_Store
-Thumbs.dbeasy-exit-frontend/
+dist/
+build/
 
-easy-exit-frontend/
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
