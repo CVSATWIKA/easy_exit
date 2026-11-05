@@ -1,6 +1,6 @@
 const API_URL =
   process.env.REACT_APP_API_URL ||
-  "https://easy-exit-backend-1.onrender.com";
+  "http://localhost:30081";
 
 function getCookie(name) {
   const value = `; ${document.cookie}`;
